@@ -1,0 +1,76 @@
+id,claim,manuscript,recomputed,rel_diff,status,source
+F1.n,number of parameter sets in Fig 1,264,264,0,PASS,needsim1.csv: row count
+F1.thin.lo,median |rel. err| of Prop. 1 at p<0.02,0.011,0.01097,0.0026,PASS,"needsim1.csv: median |thin_err|, p<0.02"
+F1.lna.lo,median |rel. err| of the LNA at p<0.02,0.00022,0.000215,0.0225,PASS,"needsim1.csv: median |lna_err|, p<0.02 and beta=0"
+F1.thin.hi,median |rel. err| of Prop. 1 at half occupancy,0.82,0.8202,0.000265,PASS,"needsim1.csv: median |thin_err|, p in [0.45,0.55]"
+F1.lna.hi,median |rel. err| of the LNA at half occupancy,0.034,0.03357,0.0126,PASS,"needsim1.csv: median |lna_err|, p in [0.45,0.55] and beta=0"
+F2.slope,intrinsic excess scales as eps^0.988,0.988,0.9884,0.000427,PASS,"needsim2_matchedmean.csv: slope of log(CV2_int-1/mf) vs log(eps), beta=0"
+F2.coeff,coefficient of the suppression law,0.412,0.4124,0.00107,PASS,needsim2_matchedmean.csv: exp(intercept) of the same fit
+F2.ext.b0,d log CV2_ext / d log eps at beta=0,0,1.886e-13,1.89e-13,PASS,"needsim2_matchedmean.csv: slope, beta=0"
+F2.ext.b1,d log CV2_ext / d log eps at beta=1,-0.476,-0.4764,0.000748,PASS,"needsim2_matchedmean.csv: slope, beta=1"
+F2.g.exact,max |g-1| at beta=0 (transparency),0,3.284e-13,3.28e-13,PASS,"needsim2_matchedmean.csv: max|gain-1|, beta=0"
+F2.g.all,mean-field gain accurate to better than 8% (max %),<= 8,7.693,,PASS,"needsim2_matchedmean.csv: max |gain/g_th-1|, beta=1"
+F2.g.peak,worst-case gain error (%),7.7,7.693,0.000919,PASS,"needsim2_matchedmean.csv: max |gain/g_th-1|, beta=1"
+F2.g.peakM,decoy load at which the gain error peaks,300,316,0.0533,PASS,"needsim2_matchedmean.csv: argmax |gain/g_th-1|, beta=1"
+F2.g.weak,gain accurate to 1% or better for M<32 (max %),<= 1,0.4402,,PASS,"needsim2_matchedmean.csv: max |gain/g_th-1|, beta=1, M<32"
+F2.floor.p0.09,extrinsic floor inflation 1/(1-p)^2 at p=0.09,1.21,1.208,0.002,PASS,closed form 1/(1-p)^2
+F2.floor.p0.5,extrinsic floor inflation 1/(1-p)^2 at p=0.5,4,4,0,PASS,closed form 1/(1-p)^2
+F2.floor.p0.91,extrinsic floor inflation 1/(1-p)^2 at p=0.91,123,123.5,0.00371,PASS,closed form 1/(1-p)^2
+F3.base.dilution,"CV2_cc with no reservoir, dilution, genes replicating",0.049,0.04909,0.00188,PASS,"needsim4_cc_decomp.csv: cc_rep at M=0, dosage=3"
+F3.base.active-deg,"CV2_cc with no reservoir, active-deg, genes replicating",0.07,0.06985,0.00217,PASS,"needsim4_cc_decomp.csv: cc_rep at M=0, dosage=3"
+F3.base.active-deg.nodose,"CV2_cc with no reservoir, active-deg, reservoir replicating alone",0.024,0.02368,0.0131,PASS,"needsim4_cc_decomp.csv: cc_rep at M=0, dosage=0"
+F3.reduce,"peak fold reduction in CV2_cc, dilution, genes replicating",3.1,3.145,0.0145,PASS,"needsim4_cc_decomp.csv: max cc_ctl/cc_rep, dosage=3"
+F3.reduce.M,reservoir size at that peak,274,274,0,PASS,needsim4_cc_decomp.csv: argmax of the same ratio
+F3.reduce.141,"fold reduction at M=141, dilution, genes replicating",2.9,2.946,0.016,PASS,needsim4_cc_decomp.csv: cc_ctl/cc_rep at M=141
+F3.dilution.nosource,"number of loads at which replication is a net source, dilution",0,0,0,PASS,"needsim4_cc_decomp.csv: count of ratio<1, dosage=3"
+F3.inject.nodose,"fold excess over control at M=1995, active-deg, reservoir alone",2.8,2.827,0.00974,PASS,"needsim4_cc_decomp.csv: cc_rep/cc_ctl, dosage=0"
+F3.inject.dose,"fold excess over control at M=19, active-deg, genes replicating",2.4,2.4,0.000141,PASS,"needsim4_cc_decomp.csv: cc_rep/cc_ctl, dosage=3"
+F3.cross.nodose,"smallest M at which replication injects, active-deg, reservoir alone",274,274,0,PASS,"needsim4_cc_decomp.csv: min M with ratio<1, dosage=0"
+F3.cross.dose,"smallest M at which replication no longer injects, active-deg, genes replicating",141,141,0,PASS,"needsim4_cc_decomp.csv: min M with ratio>1, dosage=3"
+F3.peak.dose,"peak fold reduction, active-deg, genes replicating",1.8,1.803,0.00193,PASS,"needsim4_cc_decomp.csv: max ratio, dosage=3"
+F3.Mopt.min.3,"min ratio of measured optimum to 0.75(kd+xf), genes replicating",1.49,1.493,0.00224,PASS,cancellation_optimum.csv: argmin(cc)/Mpred per kd
+F3.Mopt.max.3,"max ratio of measured optimum to 0.75(kd+xf), genes replicating",1.5,1.504,0.00267,PASS,cancellation_optimum.csv: argmin(cc)/Mpred per kd
+F3.red.min,min fold reduction at the cancellation optimum,2.1,2.118,0.00847,PASS,cancellation_optimum.csv: cc at smallest M / min(cc)
+F3.red.max,max fold reduction at the cancellation optimum,2.8,2.778,0.00795,PASS,cancellation_optimum.csv: cc at smallest M / min(cc)
+F3.Mopt.min.0,"min ratio of measured optimum to 0.75(kd+xf), reservoir alone",1.49,1.493,0.00224,PASS,cancellation_optimum.csv: argmin(cc)/Mpred per kd
+F3.Mopt.max.0,"max ratio of measured optimum to 0.75(kd+xf), reservoir alone",1.5,1.504,0.00267,PASS,cancellation_optimum.csv: argmin(cc)/Mpred per kd
+F3.step.med.3,"med step recovery at M=10, genes replicating",0.82,0.8151,0.00594,PASS,needsim4_isolated.csv: over the 4 parameter sets at M=10
+F3.step.lo.3,"lo step recovery at M=10, genes replicating",0.68,0.6811,0.00155,PASS,needsim4_isolated.csv: over the 4 parameter sets at M=10
+F3.step.hi.3,"hi step recovery at M=10, genes replicating",1.14,1.135,0.00482,PASS,needsim4_isolated.csv: over the 4 parameter sets at M=10
+F3.step.med.0,"med step recovery at M=10, reservoir alone",0.91,0.9123,0.00253,PASS,needsim4_isolated.csv: over the 4 parameter sets at M=10
+F3.step.lo.0,"lo step recovery at M=10, reservoir alone",0.88,0.8772,0.0032,PASS,needsim4_isolated.csv: over the 4 parameter sets at M=10
+F3.step.hi.0,"hi step recovery at M=10, reservoir alone",1.28,1.28,0.000378,PASS,needsim4_isolated.csv: over the 4 parameter sets at M=10
+F3.step141.3,"replication step at M=141, kd=200, dilution, dosage=3",-0.35,-0.353,0.00856,PASS,needsim4_isolated.csv: step
+F3.step141.0,"replication step at M=141, kd=200, dilution, dosage=0",-0.38,-0.378,0.00517,PASS,needsim4_isolated.csv: step
+F3.cv2y.dilution,"decline in CV2y from M=0 to M=1995, dilution (%)",17,17.48,0.0285,PASS,"needsim4_isolated.csv: CV2y, dosage=3"
+F3.cv2y.active-deg,"decline in CV2y from M=0 to M=1995, active-deg (%)",7,6.632,0.0526,PASS,"needsim4_isolated.csv: CV2y, dosage=3"
+F3.cv2y.scatter,largest rise in CV2y between adjacent loads (%),<= 0.6,0.5865,,PASS,needsim4_isolated.csv: max positive diff of CV2y/CV2y(M=0)
+F3.beta0.min.M1600,min within-cycle F_f at M=1600 (beta=0),1.3,1.304,0.0027,PASS,needsim5_beta0.csv: Fmin
+F3.beta0.max.M1600,max within-cycle F_f at M=1600 (beta=0),1.64,1.638,0.00124,PASS,needsim5_beta0.csv: Fmax
+F3.beta0.min.M400,min within-cycle F_f at M=400 (beta=0),2.07,2.07,0.000114,PASS,needsim5_beta0.csv: Fmin
+F3.beta0.max.M400,max within-cycle F_f at M=400 (beta=0),2.93,2.927,0.00105,PASS,needsim5_beta0.csv: Fmax
+F3.beta0.min.M0,min within-cycle F_f at M=0 (beta=0),3.51,3.51,1.87e-05,PASS,needsim5_beta0.csv: Fmin
+F3.beta0.max.M0,max within-cycle F_f at M=0 (beta=0),5.45,5.451,0.000224,PASS,needsim5_beta0.csv: Fmax
+F3.excursion.dilution,"peak-to-trough excursion of x_f, no decoys, dilution (%)",75,74.56,0.00589,PASS,recomputed: ssa_cellcycle at M=0 with kx from needsim4_isolated.csv
+F3.excursion.active-deg,"peak-to-trough excursion of x_f, no decoys, active-deg (%)",75,74.98,0.000303,PASS,recomputed: ssa_cellcycle at M=0 with kx from needsim4_isolated.csv
+F2d.gain.fixed,"extrinsic gain at k_d=30, M=400, decoy architecture",1.58,1.576,0.00278,PASS,data/iteron_coscale.csv: kind=exact
+F2d.gain.coscale,"extrinsic gain at k_d=30, M=400, iteron architecture",0.19,0.1863,0.0196,PASS,data/iteron_coscale.csv: kind=exact
+F2d.ratio.400,"ratio of transmitted noise, fixed vs co-scaling, k_d=30, M=400",8.5,8.458,0.0049,PASS,data/iteron_coscale.csv: ratio of the two exact gains
+F2d.ratio.1000,"ratio of transmitted noise, fixed vs co-scaling, k_d=30, M=1000",33,32.86,0.00436,PASS,data/iteron_coscale.csv: ratio of the two exact gains
+F2d.peak,reservoir size at which the fixed-reservoir gain peaks (k_d=30),230,230,0,PASS,data/iteron_coscale.csv: argmax of meanfield g
+F2d.meanfield.err,worst |exact / mean-field - 1| over the co-scaling scan (%),5.5,5.477,0.00421,PASS,data/iteron_coscale.csv: exact vs meanfield rows
+F2d.identity,max |g_coscale - epsilon| at beta=1 (should be 0),0.00e+00,2.36e-16,2.36e-16,PASS,identity check on Eq (gain-coscale) against x_f/(x_f+chi)
+F2ab.matched.mean,"matched mean free protein in Fig 2(a,b)",10,10,9.95e-06,PASS,data/needsim2_matchedmean.csv: mean of mf
+F2d.bio.g_co.weakest,"co-scaling gain, weakest over m=3-9",0.861,0.8608,0.0002,PASS,data/iteron_biological.csv: panel-d selection
+F2d.bio.g_co.strongest,"co-scaling gain, strongest over m=3-9",0.066,0.06565,0.00525,PASS,data/iteron_biological.csv: panel-d selection
+F2d.bio.g_fixed.lo,"fixed-reservoir gain, lo over m=3-9",1.178,1.178,0.000404,PASS,data/iteron_biological.csv: panel-d selection
+F2d.bio.g_fixed.hi,"fixed-reservoir gain, hi over m=3-9",2.296,2.296,3.92e-05,PASS,data/iteron_biological.csv: panel-d selection
+F2d.bio.ratio,ratio at the strongest point in m=3-9,33,33.07,0.0021,PASS,data/iteron_biological.csv: argmin g_coscaling over the panel-d selection
+F2d.bio.capacity,chi_over_xf at the strongest point in m=3-9,6.9,6.926,0.00377,PASS,data/iteron_biological.csv: argmin g_coscaling over the panel-d selection
+F2d.bio.occupancy,occupancy at the strongest point in m=3-9,0.51,0.5108,0.00151,PASS,data/iteron_biological.csv: argmin g_coscaling over the panel-d selection
+F2d.bio.kd,kd at the strongest point in m=3-9,3,3,0,PASS,data/iteron_biological.csv: argmin g_coscaling over the panel-d selection
+F2d.bio.m,iterons_per_plasmid at the strongest point in m=3-9,9,9,0,PASS,data/iteron_biological.csv: argmin g_coscaling over the panel-d selection
+F2d.bio.m3.atten,"attenuation at m=3, weakest end (%)",14,13.92,0.00591,PASS,data/iteron_biological.csv: 1 - max g_coscaling at m=3
+F2d.bio.mf.worst,worst mean-field overestimate of the co-scaling gain (fold),4.4,4.44,0.00918,PASS,data/iteron_biological.csv: max meanfield/exact
+F2d.bio.mf.median,median |mean-field / exact - 1| over the panel-d set (%),<= 8,3.003,,PASS,data/iteron_biological.csv: median |meanfield/exact - 1|
+F2d.bio.monotone,number of plotted k_d curves non-monotone in m,0,0,0,PASS,data/iteron_biological.csv: monotonicity of g_coscaling within the selection

@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the paper."
+title: "Decoy buffering of intensive and extensive noise: simulation code"
+abstract: >-
+  Stochastic models of transcription-factor binding to nonspecific decoy
+  sites: an exact adiabatic master-equation solver, an exact stochastic
+  simulation with explicit binding, and an age-structured cycling-cell
+  simulation with genome replication. Reproduces all figures and reported
+  numbers of the accompanying paper.
+authors:
+  - family-names: "[Surname]"
+    given-names: "[Given names]"
+    affiliation: "[Institution]"
+    orcid: "https://orcid.org/[ORCID]"
+version: "1.0.0"
+date-released: "2026-09-18"
+license: MIT
+repository-code: "https://github.com/[user]/[repo]"
+doi: "[Zenodo DOI]"
+keywords:
+  - stochastic gene expression
+  - transcription factor
+  - decoy binding sites
+  - extrinsic noise
+  - cell cycle
+  - chemical master equation
+preferred-citation:
+  type: article
+  title: >-
+    Nonspecific transcription factor binding buffers intensive but not
+    extensive noise sources, and amplifies them once bound protein turns over
+  authors:
+    - family-names: "[Surname]"
+      given-names: "[Given names]"
+  journal: "PLOS Computational Biology"
+  year: 2026
