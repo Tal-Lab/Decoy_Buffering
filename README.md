@@ -1,10 +1,9 @@
-# Decoy buffering of intensive and extensive noise — code and data
+# Noise buffering and amplification by binding reservoirs — code and data
 
 Code and data reproducing every figure and every quoted number in:
 
-> *Nonspecific transcription factor binding buffers intensive but not
-> extensive noise sources, and amplifies them once bound protein turns over*
-> — [Author Name], submitted to PLOS Computational Biology.
+> *The limits of decoy buffering: Binding reservoirs amplify extrinsic noise unless they scale with the source*
+> — Shay Tal, submitted to PLOS Computational Biology.
 
 [![DOI](https://zenodo.org/badge/DOI/ZENODO_DOI_HERE.svg)](https://doi.org/ZENODO_DOI_HERE)
 
